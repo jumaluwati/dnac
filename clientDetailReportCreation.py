@@ -1,3 +1,9 @@
+# Copyright (c) 2016-2020 Cisco and/or its affiliates
+# by/ jalluwat@cisco.com
+# for detailed explanation, please refer to the documentation 
+#
+# this code generates a client detail report on dna center
+
 
 import urllib3
 from dnacentersdk import DNACenterAPI
@@ -5,9 +11,9 @@ import json
 
 urllib3.disable_warnings()
 
-dnac = DNACenterAPI(username = '',
-                    password = '',
-                    base_url = 'https://{DNAC URL}:443',
+dnac = DNACenterAPI(username = '', #add dnac username
+                    password = '', #add dnac password
+                    base_url = 'https://{DNAC URL}:443', #add dnac url
                     version = '2.2.3.3',
                     verify = False)
 
