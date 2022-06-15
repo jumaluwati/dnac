@@ -269,8 +269,8 @@ view = {
                 "displayName":"SSID",
                 "value":[{
 
-                        "value":"wsim-SSID",
-                        "displayValue":"wsim-SSID"
+                        "value":"", #add ssid name
+                        "displayValue":"" #add ssid name
                     }
                 ]
             }
