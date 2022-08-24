@@ -12,9 +12,9 @@ from urllib3.exceptions import InsecureRequestWarning  # for insecure https warn
 
 
 
-DNAC_URL = "ADD DNAC URL"
-DNAC_USER = "USERNAME"
-DNAC_PASS = "PASSWORD"
+DNAC_URL = "https://10.147.26.90"
+DNAC_USER = "jalluwat"
+DNAC_PASS = "C1sco12345"
 
 urllib3.disable_warnings(InsecureRequestWarning)  # disable insecure https warnings
 
@@ -23,7 +23,7 @@ DNAC_AUTH = HTTPBasicAuth(DNAC_USER, DNAC_PASS)
 
 REPORT_CATEGORY = 'Client'
 VIEW_NAME = 'Client Detail'
-REPORT_NAME = 'Client Report Detail 24 hours'
+REPORT_NAME = 'Client Report Detail Token Testing'
 
 
 def pprint(json_data):
@@ -35,17 +35,18 @@ def pprint(json_data):
     print(json.dumps(json_data, indent=4, separators=(', ', ': ')))
 
 
-def get_dnac_jwt_token(dnac_auth):
-    """
-    Create the authorization token required to access DNA C
-   :param dnac_auth - Cisco DNA Center Basic Auth string
-   :return: Cisco DNA Center JWT token
-    """
-    url = DNAC_URL + '/dna/system/api/v1/auth/token'
-    header = {'content-type': 'application/json'}
-    response = requests.post(url, auth=dnac_auth, headers=header, verify=False)
-    dnac_jwt_token = response.json()['Token']
-    return dnac_jwt_token
+tokenurl = "https://10.147.26.90:443/dna/system/api/v1/auth/token" 
+response = requests.request ( 
+    "POST", 
+    tokenurl, 
+    auth = DNAC_AUTH,
+    verify = False 
+) 
+
+token = "" #TOKEN PLACEHOLDER 
+tokenDict = response.json() 
+for key,value in tokenDict.items(): 
+    token += value
 
 
 def get_report_view_groups(dnac_auth):
@@ -126,7 +127,7 @@ def main():
     print('\nCreate Report App Run Start, ', current_time)
 
     # get the Cisco DNA Center Auth token
-    dnac_auth = get_dnac_jwt_token(DNAC_AUTH)
+    dnac_auth = token
 
     # find out the report view group id
     report_view_groups = get_report_view_groups(dnac_auth)
@@ -148,8 +149,8 @@ def main():
   
     # get the detailed report views
     report_detail_view = get_detailed_report_views(report_view_id, view_group_id, dnac_auth)
-    print('\nClient Report Detail \n')
-    pprint(report_detail_view)
+    #print('\nClient Report Detail \n')
+    #pprint(report_detail_view)
 
     # create the report request payload
     
