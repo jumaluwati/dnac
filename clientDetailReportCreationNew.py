@@ -12,9 +12,9 @@ from urllib3.exceptions import InsecureRequestWarning  # for insecure https warn
 
 
 
-DNAC_URL = "https://10.147.26.90"
-DNAC_USER = "jalluwat"
-DNAC_PASS = "C1sco12345"
+DNAC_URL = "DNAC URL"
+DNAC_USER = "USERNAME"
+DNAC_PASS = "PASSWORD"
 
 urllib3.disable_warnings(InsecureRequestWarning)  # disable insecure https warnings
 
@@ -35,7 +35,7 @@ def pprint(json_data):
     print(json.dumps(json_data, indent=4, separators=(', ', ': ')))
 
 
-tokenurl = "https://10.147.26.90:443/dna/system/api/v1/auth/token" 
+tokenurl = "https://{ADD DNAC URL}:443/dna/system/api/v1/auth/token" 
 response = requests.request ( 
     "POST", 
     tokenurl, 
