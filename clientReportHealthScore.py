@@ -12,7 +12,7 @@ from urllib3.exceptions import InsecureRequestWarning  # for insecure https warn
 
 
 
-DNAC_URL = "https://10.147.26.90" #ADD YOUR DNAC URL
+DNAC_URL = "https://10.147.26.90" #ADD YOUR DNAC URL IN THE SAME FORM
 DNAC_USER = "USERNAME"
 DNAC_PASS = "PASSWORD"
 
@@ -34,8 +34,9 @@ def pprint(json_data):
     """
     print(json.dumps(json_data, indent=4, separators=(', ', ': ')))
 
+#generating a new token
 
-tokenurl = "https://10.147.26.90:443/dna/system/api/v1/auth/token" #CHANGE THE TOKEN URL
+tokenurl = DNAC_URL + ":443/dna/system/api/v1/auth/token" 
 response = requests.request ( 
     "POST", 
     tokenurl, 
@@ -168,7 +169,7 @@ def main():
             {
                 'type': "EMAIL",
                "emailAddresses":[
-                  "ADDYOUREMAIL@SERVER.COM"
+                  "jalluwat@cisco.com"
                ]
             }
         ],
@@ -423,7 +424,7 @@ def main():
     #getting the healthscore from the report
 
 
-    url3 = f"https://10.147.26.90/api/dnacaap/v1/daas/core/content/data-set/{reportId}/{executionId}"
+    url3 = DNAC_URL + f"/api/dnacaap/v1/daas/core/content/data-set/{reportId}/{executionId}"
 
     headers = {"x-auth-token": token}
     response = requests.request("GET", url3, headers=headers, verify=False)
@@ -441,8 +442,8 @@ def main():
     
     for details in dataPy3["client_details"]:
         scores = details["averageHealthScore_median"]
-        #print(scores)
-        #scoreslist.append(scores)
+        print(scores)
+        scoreslist.append(scores)
         scoresum += int(scores)
 
 
