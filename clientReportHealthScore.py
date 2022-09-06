@@ -1,3 +1,12 @@
+# Copyright (c) 2016-2022 Cisco and/or its affiliates
+# by/ jalluwat@cisco.com
+#  
+# this code generates a client detail report on dna center utilizing the native DNA Center APIs
+# The code also prints the avergae health score of all clients
+#
+# For any questions, please contact jalluwat@cisco.com
+
+
 import datetime
 import logging
 import os
