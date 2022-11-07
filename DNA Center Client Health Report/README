@@ -1,1 +1,11 @@
-Info
+In this folder you find a mini documentation named: Introduction to DNA Center Report APIs, I recommend goiing trough it if you are new to DNA Center reports APIs in general
+
+The other two python files contain the code used to generate a Client Details Report made in 2 different ways:
+
+1- ClientDetailsReport, this one will utilize the DNACenterSDK library which, in a few words, saves you the troubles of preparing your environemnt prior to calling the API, please refere to the mini documentation to learn more.
+
+2- ClientDetailsReport2: this file on the other hand, gets DNA Center to generate a report (the same report by default) using URLs and token, plus is generates an average  healthscore for all clients connected wirelessly.
+
+Note:
+
+Please dont forget to install the DNACenterSDK library if you are welling to use the first python code. To install, just type "pip install dnacentersdk' on your terminal window.
