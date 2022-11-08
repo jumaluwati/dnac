@@ -1,3 +1,11 @@
+# Copyright (c) 2016-2022 Cisco and/or its affiliates
+# by/ jalluwat@cisco.com
+#
+# this code generates a custom Excel report for selected end user/s managed by Cisco DNA Center
+#
+#Please downlaod first the DNACenterSDK by typing on your terminal/powershell : pip install dnacentersdk
+
+
 import urllib3
 from dnacentersdk import DNACenterAPI
 import json
@@ -25,7 +33,7 @@ def collection():
 	current_time = str(datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
 
 	#user mac addresses of interest
-	macAddress = ['02:35:12:F0:00:11', '02:35:12:F0:00:12']
+	macAddress = ['02:35:12:F0:00:11', '02:35:12:F0:00:12'] #Add MAC addresses like how its done
 	count = 0
 	for i in macAddress:
 		
@@ -34,7 +42,7 @@ def collection():
 	    	'entity_value': i
 	    	}
 
-
+		#The parameters used in this example are: user ID, connection status, ssid, location and AP type. Feel free to add more according to whats available
 		data = dnac.users.get_user_enrichment_details(headers)
 		userId = data[0]['userDetails']['userId']
 		connectionStatus = data[0]['userDetails']['connectionStatus']
