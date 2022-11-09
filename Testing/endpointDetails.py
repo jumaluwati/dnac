@@ -16,9 +16,9 @@ from requests.auth import HTTPBasicAuth
 
 urllib3.disable_warnings()
 
-DNAC_IP = '10.147.26.90'
-USERNAME = 'jalluwat'
-PASSWORD = 'C1sco12345'
+DNAC_IP = '' #Add the IP like this: '10.147.26.90'
+USERNAME = ''
+PASSWORD = ''
 
 DNAC_AUTH = HTTPBasicAuth(USERNAME, PASSWORD)
 
@@ -58,7 +58,7 @@ deliveries = [
             {
                "type":"EMAIL",
                "emailAddresses":[
-                  "jalluwat@cisco.com"  #email address
+                  ""  #add your email address
                ],
                "emailSubscriptionEndpointId":"None",
                "emailSubscriptionEndpointInstanceId":"None"
@@ -70,7 +70,7 @@ deliveries = [
 
 ]
 
-name = "November 9th Juma 4"  #Name of the report
+name = "TEST"  #Name of the report
 
 schedule = {"type":"SCHEDULE_NOW"}
 
