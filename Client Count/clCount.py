@@ -1,3 +1,12 @@
+
+
+# Copyright (c) 2016-2023 Cisco and/or its affiliates
+#
+# by/ jalluwat@cisco.com
+#
+# This is an API call that prints the name of an AP and the number of clients connected to the AP
+
+
 import urllib3
 import json
 import requests
