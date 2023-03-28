@@ -5,7 +5,7 @@ The output is a dictionary of:
 - keys: Locations
 - values: list of AP names
 
-This simple script utilizes the DNA Center SDK library (make sure to download it for the code to work)
+This simple script utilizes the DNA Center SDK library (make sure to download it, along with the other libraries, for the script to work)
 
 The APIs used are:
 1. Get Device List
