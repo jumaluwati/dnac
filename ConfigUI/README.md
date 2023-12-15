@@ -62,6 +62,11 @@ Click on the arrow next to each device to view additional options.
 Download the full configuration of a device by clicking the respective option.
 
 
+
+![Catalyst Center Device Config Downloader](https://github.com/jumaluwati/dnac/raw/main/ConfigUI/Collateral/screenshot1.png)
+
+
+
 ## Important Note
 
 Ensure that your Catalyst Center credentials are kept secure and not shared with unauthorized individuals.
