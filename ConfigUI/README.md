@@ -1,15 +1,67 @@
-This simple scipt will start a UI with all Catalyst Center (DNA Center) devices and an arrow next to each device; once clicked, the full config of the device will be downloaded in a .txt file.
+# Catalyst Center Device Configuration Downloader
 
-important libraries to have:
+## Project Title
+Catalyst Center Device Configuration Downloader
 
-- flask
-- json
-- requests
-- uttlib3
+## Overview
+This project is designed to facilitate the easy retrieval and downloading of the full configuration of Catalyst Center (DNA Center) devices through a user-friendly web interface. It utilizes Flask as the web framework and requires specific libraries for proper functionality.
 
-Instructions:
+## Prerequisites
+Ensure the following libraries are installed:
 
-1. in a directory of choice, place the app.py file in it
-   1.1. edit the app.py file and add your credentials to access the Catalyst Center, and the IP address of the Catalysr Center
-3. inside of that directory, create a folder with name "templates", and place the list_devices.html file in it
-4. run the app.py by typing python app.py
+```bash
+pip install flask json requests urllib3
+```
+
+## Installation
+
+Clone this repository:
+
+```bash
+git clone https://github.com/jumaluwati/dnac.git
+```
+
+Navigate to the ConfigUI directory:
+
+```bash
+cd dnac/ConfigUI
+```
+
+Edit the app.py file to add your Catalyst Center credentials and the IP address of the Catalyst Center:
+
+```python
+# Edit the following lines in app.py
+DNAC_IP = "your_dna_center_ip"
+USERNAME = "your_username"
+PASSWORD = "your_password"
+```
+
+Create a folder named "templates" in the same directory and place the list_devices.html file in it:
+
+```bash
+mkdir templates
+cp path/to/list_devices.html path/to/dnac/ConfigUI/templates/
+```
+
+Run the application by executing the following command:
+
+```bash
+python app.py
+```
+
+Visit http://localhost:5000 in your web browser to access the Catalyst Center Device Configuration Downloader.
+
+## Usage
+
+Open the web interface by navigating to http://localhost:5000.
+Click on the arrow next to each device to view additional options.
+Download the full configuration of a device by clicking the respective option.
+
+## Important Note
+
+Ensure that your Catalyst Center credentials are kept secure and not shared with unauthorized individuals.
+
+## Contributing
+
+If you'd like to contribute to this project, feel free to fork the repository and submit a pull request. Issues and feature requests can be submitted through the GitHub issue tracker.
+
