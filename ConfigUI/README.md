@@ -10,5 +10,6 @@ important libraries to have:
 Instructions:
 
 1. in a directory of choice, place the app.py file in it
-2. inside of that directory, create a folder with name "templates", and place the list_devices.html file in it
-3. run the app.py by typing python app.py
+   1.1. edit the app.py file and add your credentials to access the Catalyst Center, and the IP address of the Catalysr Center
+3. inside of that directory, create a folder with name "templates", and place the list_devices.html file in it
+4. run the app.py by typing python app.py
