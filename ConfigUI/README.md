@@ -3,8 +3,10 @@
 ## Project Title
 Catalyst Center Device Configuration Downloader
 
+
 ## Overview
 This project is designed to facilitate the easy retrieval and downloading of the full configuration of Catalyst Center (DNA Center) devices through a user-friendly web interface. It utilizes Flask as the web framework and requires specific libraries for proper functionality.
+
 
 ## Prerequisites
 Ensure the following libraries are installed:
@@ -12,6 +14,7 @@ Ensure the following libraries are installed:
 ```bash
 pip install flask json requests urllib3
 ```
+
 
 ## Installation
 
@@ -51,15 +54,18 @@ python app.py
 
 Visit http://localhost:5000 in your web browser to access the Catalyst Center Device Configuration Downloader.
 
+
 ## Usage
 
 Open the web interface by navigating to http://localhost:5000.
 Click on the arrow next to each device to view additional options.
 Download the full configuration of a device by clicking the respective option.
 
+
 ## Important Note
 
 Ensure that your Catalyst Center credentials are kept secure and not shared with unauthorized individuals.
+
 
 ## Contributing
 
