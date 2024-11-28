@@ -57,7 +57,7 @@ The script updates the specified network profile with the selected template.
 
 ## Please note
 
-- **AssignTemplateToProfile.py**: Notes the placeholders for `SITE_PROFILE_ID` and `TEMPLATE_ID` that need to be replaced with actual values.
+  - **AssignTemplateToProfile.py**: Notes the placeholders for `SITE_PROFILE_ID` and `TEMPLATE_ID` that need to be replaced with actual values.
 
 **Disclaimer**: Ensure all credentials and IP addresses are secured and handled in compliance with your organization's security policies.
 
