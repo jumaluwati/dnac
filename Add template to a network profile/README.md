@@ -55,10 +55,8 @@ Before running `AssignTemplateToProfile.py`, update the `SITE_PROFILE_ID` and `T
 
 The script updates the specified network profile with the selected template.
 
-## Important Comments
+## Please note
 
-- **templateID.py**: Comments in uppercase indicate areas where the script handles errors like failed authentication or JSON parsing issues.
-- **networkProfileID.py**: Highlights the exclusive focus on switching profiles.
 - **AssignTemplateToProfile.py**: Notes the placeholders for `SITE_PROFILE_ID` and `TEMPLATE_ID` that need to be replaced with actual values.
 
 **Disclaimer**: Ensure all credentials and IP addresses are secured and handled in compliance with your organization's security policies.
