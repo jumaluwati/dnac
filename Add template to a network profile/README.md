@@ -4,9 +4,9 @@ This repository contains three Python scripts designed to interact with Cisco DN
 
 ## Overview
 
-1. **templateID.py**: Fetches template IDs and related data from Cisco DNA Center.
-2. **networkProfileID.py**: Retrieves network profile IDs and related data.
-3. **AssignTemplateToProfile.py**: Uses the IDs obtained from the first two scripts to assign a template to a network profile.
+1. **[templateID.py](./templateID.py)**: Fetches template IDs and related data from Cisco DNA Center.
+2. **[networkProfileID.py](./networkProfileID.py)**: Retrieves network profile IDs and related data.
+3. **[AssignTemplateToProfile.py](./AssignTemplateToProfile.py)**: Uses the IDs obtained from the first two scripts to assign a template to a network profile.
 
 ## Prerequisites
 
@@ -21,7 +21,7 @@ This repository contains three Python scripts designed to interact with Cisco DN
 
 Run `templateID.py` to retrieve all templates available in the Cisco DNA Center.
 
-**[templateID.py](./templateID.py)**
+
 
 This script will print a list of template IDs and other details in JSON format.
 
@@ -29,7 +29,7 @@ This script will print a list of template IDs and other details in JSON format.
 
 Run `networkProfileID.py` to get network profile IDs.
 
-**[networkProfileID.py](./networkProfileID.py)**
+
 
 This script will display network profile details, focusing on switching profiles.
 
@@ -37,7 +37,7 @@ This script will display network profile details, focusing on switching profiles
 
 Before running `AssignTemplateToProfile.py`, update the `SITE_PROFILE_ID` and `TEMPLATE_ID` variables using the output from the previous scripts.
 
-**[AssignTemplateToProfile.py](./AssignTemplateToProfile.py)**
+
 
 The script updates the specified network profile with the selected template.
 
