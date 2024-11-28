@@ -1,12 +1,13 @@
 # Cisco DNA Center Automation Scripts
 
-This repository contains three Python scripts designed to interact with Cisco DNA Center. These scripts are used to fetch template and network profile IDs and then assign a template to a network profile.
+This repository contains three Python scripts designed to interact with Cisco DNA Center (version 2.3.5.5). These scripts are used to fetch template and network profile IDs and then assign a template to a network profile. The scripts use a separate configuration file to manage credentials.
 
 ## Overview
 
 1. **[templateID.py](./templateID.py)**: Fetches template IDs and related data from Cisco DNA Center.
 2. **[networkProfileID.py](./networkProfileID.py)**: Retrieves network profile IDs and related data.
 3. **[AssignTemplateToProfile.py](./AssignTemplateToProfile.py)**: Uses the IDs obtained from the first two scripts to assign a template to a network profile.
+4. **[config.py](./config.py)**: Contains configuration settings and credentials used by the other scripts.
 
 ## Prerequisites
 
@@ -14,6 +15,19 @@ This repository contains three Python scripts designed to interact with Cisco DN
 - `requests` library (install using `pip install requests`)
 - This is tested on Cisco DNA Center version 2.3.5.5
 - Network connectivity to the Cisco DNA Center
+
+## Configuration
+
+Create a `config.py` file in the same directory as the scripts. This file should contain the following variables:
+
+```python
+# config.py
+
+DNAC_IP = "1.1.1.1"
+USERNAME = "user"
+PASSWORD = "pass"
+```
+Make sure to replace the placeholders with your actual Cisco DNA Center IP address and credentials.
 
 ## Usage
 
