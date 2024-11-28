@@ -1,6 +1,6 @@
 # Cisco DNA Center Automation Scripts
 
-This repository contains three Python scripts designed to interact with Cisco DNA Center (version 2.3.5.5). These scripts are used to fetch template and network profile IDs and then assign a template to a network profile.
+This repository contains three Python scripts designed to interact with Cisco DNA Center. These scripts are used to fetch template and network profile IDs and then assign a template to a network profile.
 
 ## Overview
 
